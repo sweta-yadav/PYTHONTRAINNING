@@ -1,3 +1,4 @@
+
 b=int(input("enter num of blocks"))
 l=int(input("enter num of blocks"))
 s=int(input("enter num of blocks"))
