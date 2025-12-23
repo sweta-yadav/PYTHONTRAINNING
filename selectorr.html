@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="message">Hello world!</p>
+
+    <div class="box">Box1</div>
+    <div class="box">Box2</div>
+
+    <p>this is first paragraph</p>
+    <p>this is second paragraph</p>
+
+    <div class="container">
+        <p class="paragraphs">this is praragrh from container</p>
+        <p class="paragraphs">this is another paragraph from container</p>
+    </div>
+
+    <script>
+        const messages=document.getElementById("message");
+        console.log("selector from id:", messages.textContent);
+
+        const boxes=document.getElementsByClassName("box");
+        console.log("selcetor by id:",boxes.length);
+
+        const text=document.getElementsByTagName("p");
+        console.log("selector by tag name:",text[0].textContent)
+
+        const paragraph=document.querySelector(".container");
+        console.log("queryselector:",paragraph.textContent)
+
+
+        const paragraphs=document.querySelectorAll(".container")
+        paragraphs.forEach((p,index) => {
+            console.log(`querselectorAll ${index + 1}:`,p.textContent);
+
+        });
+
+    </script>
+</body>
+</html>

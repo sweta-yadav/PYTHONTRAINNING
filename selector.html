@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Element Selectors Example</title>
+</head>
+<body>
+
+  <!-- Element with ID -->
+  <p id="message">Hello, World!</p>
+
+  <!-- Elements with class -->
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+
+  <!-- Paragraph elements -->
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+
+  <!-- Elements inside container -->
+  <div class="container">
+    <p class="text">First paragraph in container</p>
+    <p class="text">Second paragraph in container</p>
+  </div>
+
+  <script>
+    // Select by ID
+    const message = document.getElementById("message");
+    console.log("getElementById:", message.textContent);
+
+    // Select by class name
+    const boxes = document.getElementsByClassName("box");
+    console.log("getElementsByClassName (count):", boxes.length);
+
+    // Select by tag name
+    const paragraphs = document.getElementsByTagName("p");
+    console.log("getElementsByTagName:", paragraphs[0].textContent);
+
+    // Select the first element that matches a CSS selector
+    const firstParagraph = document.querySelector(".text");
+    console.log("querySelector:", firstParagraph.textContent);
+
+    // Select all elements that match a CSS selector
+    const allTextParagraphs = document.querySelectorAll(".text");
+    allTextParagraphs.forEach((p, index) => {
+      console.log(`querySelectorAll Paragraph ${index + 1}:`, p.textContent);
+    });
+  </script> 
+</body>
+</html>
